@@ -1,0 +1,989 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+}
+
+.account-top-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #252525;
+    color: white;
+    padding: 15px 22px;
+}
+
+.account-name-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-button-settings {
+    cursor: pointer;
+}
+
+.account-name {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    cursor: pointer;
+}
+
+.account-name-group p {
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+}
+
+.account-notification {
+    display: flex;
+    align-items: center;
+    border: 1px solid #323539;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: #2B2D2F;
+    cursor: pointer;
+}
+
+.account-tarifi-and-pay {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #323539;
+    cursor: pointer;
+}
+.account-buttons-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 15px;
+}
+.account-logo-left img {
+    width: 48px;
+}
+.account-menu-group {
+    display: flex;
+}
+.main-left-navbar {
+    width: 5%;
+    /* height: 100vh; */
+    min-height: 104vh;
+    /* min-height: max-content; */
+    background-color: #252525;
+    color: #858C95;
+    padding: 35px 0px;
+    min-width: 95px;
+}
+
+.main-content-place {
+    width: 95%;
+    padding: 0px 30px;
+    flex-grow: 1;
+}
+
+main {
+    display: flex;
+    position: relative;
+    align-items: stretch;
+    
+}
+
+.navbar-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-button-add span {
+    white-space: nowrap;
+}
+
+.main-select-sform-otchet span {
+    white-space: nowrap;
+    min-width: 165px;
+}
+
+.navbar-buttons {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+    padding: 15px;
+    gap: 8px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+}
+
+.menu-button-add {
+    background: #E6A500;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+    
+}
+
+.menu-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.menu-head h1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+    color: #333333;
+}
+.menu-table-sotrudniki {
+    display: flex;
+    gap: 15px;
+}
+.menu-table-search {
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+    border: 1px solid #E9EBEF;
+    border-radius: 6px;
+    width: 66%;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.menu-table-search input {
+    padding: 12px;
+    outline: none;
+    border: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.1px;
+    color: #999999;
+    width: 100%;
+
+}
+
+.menu-table-search button {
+    padding: 0px;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-table-sotr-group {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0px 22px; */
+    padding-top: 47px;
+    gap: 20px;
+}
+.main-select-sform-otchet {
+    position: relative;
+    /* display: flex;
+    align-items: center; */
+    padding: 12px;
+    border: 1px solid #E9EBEF;
+    border-radius: 6px;
+    color: #999999;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.main-search-butt-inp {
+    display: flex;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    width: auto;
+}
+
+
+
+th {
+    position: relative;
+    color: #999999;
+    background-color: #F9F9F9;
+}
+
+.sort-icon {
+    font-size: 10px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.middle-color {
+    color: #EEA23E;
+    padding: 5px 10px;
+    background: #FFFAF2;
+    border-radius: 8px;
+}
+
+.last-color {
+    color: #C8322B;
+    padding: 5px 10px;
+    background: #FFEFEE;
+    border-radius: 8px;
+}
+
+.action-button {
+    background-color: #F9F9F9;
+    border: 1px solid #E7E7E7;
+    border-radius: 8px;
+    color: #999999; 
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #eaeaea;
+}
+.main-table-of-sotr {
+    /* padding: 0px 22px; */
+}
+.table-first-th {
+    color: black;
+}
+
+td {
+    font-weight: 400;
+    line-height: 17.14px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.table-last-th button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* .table-last-th {
+    width: 10px;
+} */
+
+.select-sform-otchet {
+    background-color: #F8F9FB;
+    border: 1px solid #E5E5E7;
+    padding: 15px;
+    color: #323539;
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    z-index: 10;
+    width: 86%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.select-sform-otchet span {
+    padding: 13px 0px;
+    cursor: pointer;
+}
+
+.select-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.arrow-icon.rotate {
+    transform: rotate(180deg);
+}
+.table-setting-select {
+    /* padding: 10px; */
+    border-radius: 6px;
+    background: #F8F9FB;
+    border: 1px solid #E5E5E7;
+    position: absolute;
+    max-width: 220px;
+    left: 80%;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.table-setting-select.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.tab-sett-head {
+    padding: 15px;
+}
+
+.tab-sett-head span {
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.1px;
+}
+
+.tab-sett-col {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Скрываем стандартный чекбокс */
+.tab-sett-col input[type="checkbox"] {
+    display: none;
+}
+
+/* Стиль кастомного чекбокса через label::before */
+.tab-sett-col label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tab-sett-col label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #E5E5E7;
+    background-color: white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: background 0.3s, border 0.3s;
+}
+
+/* Галочка при активном чекбоксе */
+.tab-sett-col input[type="checkbox"]:checked + label::before {
+    background-color: #E6A500;
+    border-color: #E6A500;
+}
+
+.tab-sett-col input[type="checkbox"]:checked + label::after {
+    content: "✔";
+    position: absolute;
+    left: 3px;
+    top: 45%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 16px;
+}
+
+/* Оранжевый фон всего div при активном чекбоксе */
+.tab-sett-col input[type="checkbox"]:checked ~ label {
+    background-color: transparent; /* Не нужен фон на label */
+}
+
+.tab-sett-col input[type="checkbox"]:checked ~ label::before {
+    background-color: #E6A500;
+}
+
+/* Сам div становится оранжевым */
+.tab-sett-col.active {
+    background-color: #F5ECD5;
+}
+
+
+
+
+
+.search-filt-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 0px;
+    cursor: pointer;
+}
+
+/* Скрываем стандартный чекбокс */
+.search-filt-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+/* Стиль кастомного чекбокса через label::before */
+.search-filt-checkbox label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.search-filt-checkbox label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #E5E5E7;
+    background-color: white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: background 0.3s, border 0.3s;
+}
+
+/* Галочка при активном чекбоксе */
+.search-filt-checkbox input[type="checkbox"]:checked + label::before {
+    background-color: #E6A500;
+    border-color: #E6A500;
+}
+
+.search-filt-checkbox input[type="checkbox"]:checked + label::after {
+    content: "✔";
+    position: absolute;
+    left: 3px;
+    top: 45%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 16px;
+}
+
+/* Оранжевый фон всего div при активном чекбоксе */
+.search-filt-checkbox input[type="checkbox"]:checked ~ label {
+    background-color: transparent; /* Не нужен фон на label */
+}
+
+.search-filt-checkbox input[type="checkbox"]:checked ~ label::before {
+    background-color: #E6A500;
+}
+
+.search-filters-modal {
+    border-right: 1px solid #EEEEEE;
+    background-color: #F9F9F9;
+    padding: 15px 20px;
+    position: absolute;
+    left: 95px;
+    max-width: 320px;
+    width: 100%;
+    z-index: 11;
+    /* opacity: 0; */
+    display: none;
+}
+/* Когда модальное окно будет активно */
+.search-filters-modal.open {
+    /* opacity: 1; */
+    display: block;
+}
+.search-filt-head {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.s-f-checkbox-group-flex {
+    padding: 7px 15px;
+}
+.s-f-checkbox-group-flex p {
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.search-filt-head p {
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.search-filt-head button {
+    padding: 10px;
+    background: white;
+    outline: none;
+    border: 1px solid #E5E5E7;
+    border-radius: 6px;
+}
+
+.block-of-kolvo {
+    display: flex;
+    align-items: end;
+    padding: 20px;
+    background: #FFFFFF;
+    border: 1px solid #E5E5E7;
+    border-radius: 12px;
+    gap: 15px;
+    width: 100%;
+
+}
+
+.bok-head-and-numbers span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.1px;
+    font-family: "Inter", sans-serif;
+    color: #858C95;
+
+}
+
+.bok-head-and-numbers p {
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: -1%;
+    font-family: "Inter", sans-serif;
+}
+
+.main-statistiks {
+    /* padding: 0px 22px; */
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    padding-top: 50px;
+}
+
+.bok-with-icon {
+    padding: 13px;
+    background: #E6A500;
+    border-radius: 6px;
+}
+
+.bok-with-icon-red-status {
+    background: #C8322B ;
+}
+
+.block-of-kolvo-red-status {
+    background: #FFEFEE;
+}
+
+.bnfa-text p {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+.bnfa-text span {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.1px;
+    color: #858C95;
+}
+
+.block-notification-of-access {
+    /* padding: 0px 22px; */
+    background: #F9EAC5;
+    border: 1px solid #E6A500;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.bnfa-button {
+    padding: 15px;
+    background: #E6A500;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    cursor: pointer;
+}
+
+.bgg-left-grafics {
+    /* padding: 20px; */
+    background: #FFFFFF;
+    border: 1px solid #E5E5E7;
+    border-radius: 12px;
+    width: 20%;
+    min-width: 235px;
+}
+
+.bgglg-circle-graf-maxwd {
+    margin: 0 auto;
+    max-width: 200px;
+    min-width: 200px;
+}
+
+.bgglg-circle-graf-group {
+    padding: 20px;
+}
+
+.bgglg-circle-head {
+    padding: 20px;
+    border-bottom: 1px solid #E5E5E7;
+}
+
+.bgglg-circle-grafics h3 {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+.bgglg-circle-graf-group li {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid #E5E5E7;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0%;
+
+}
+
+.bgglg-circle-graf-group li:last-child {
+    border-bottom: none;
+    padding-bottom: 0px;
+}
+
+.block-group-grafics {
+    padding-top: 30px;
+}
+
+.block-group-grafics {
+    display: flex;
+    gap: 30px;
+}
+
+.bggrtb-ws-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bggrtb-ws-stats-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bggrtb-ws-head p {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -1%;
+}
+
+.bggrtb-ws-stats-line p {
+
+    font-family: "Inter", sans-serif;
+    color: #858C95;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.1px;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+
+}
+
+.bggrtb-ws-head span {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.1px;
+
+    color: #858C95;
+}
+
+.bgg-rg-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.bgg-rg-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* .progress-bar {
+    width: 60%;
+    height: 5px;
+    background: orange;
+    border-radius: 12px;
+} */
+.progress-bar {
+    width: 65%;
+    height: 6px;
+    background-color: #e5ebf0; /* светло-серый фон */
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background-color: #E6A500; /* желтая полоса */
+    width: 0%; /* эта ширина будет изменяться */
+    transition: width 0.3s ease;
+  }
+
+.bggrt-block-with-stats {
+    padding: 20px;
+    border: 1px solid #E5E5E7;
+    border-radius: 12px;
+    /* max-width: 460px; */
+    width: 100%;
+}
+
+.bgg-right-grafics {
+    width: 80%;
+}
+
+.block-form-settings-left {
+    /* padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #E5E5E7; */
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.bfnr-noticication-form {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.bfs-two-factor-switch {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.bfs-two-factor-switch span {
+    font-family: "Inter", sans-serif;
+    color: #5F6D7E;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15%;
+    
+}
+
+.bfs-head h3 {
+    margin-block-start: 0px;
+    margin-block-end: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -1%;
+
+}
+
+.bfs-input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.bfs-input-flex {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 15px;
+}
+
+.bfs-input-group input {
+    padding: 10px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid #E5E5E7;
+    background: #F8F9FB;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0%;
+}
+
+.bfs-input-group div {
+    background: #F8F9FB;
+    color: #858C95;
+}
+
+.bfs-input-group label {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.1px;
+    padding-bottom: 5px;
+}
+
+
+form button {
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    background: #E6A500;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.bfnr-head h3 {
+    margin-block-start: 0px;
+    margin-block-end: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -1%;
+}
+
+.input-error {
+    border: 1px solid red !important;
+}
+
+.error-message {
+    color: red !important;
+    background: none !important;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.block-form-notification-right {
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #E5E5E7;
+    width: 20%;
+}
+
+.main-settings-place {
+    display: flex;
+    gap: 30px;
+    padding-top: 50px;
+}
+
+.bfs-input-group .main-select-sform-otchet {
+    margin-bottom: 15px;
+}
+
+.bfnr-switch-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #5A6872;
+    margin-bottom: 20px;
+}
+
+.bfnr-switch {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 24px;
+}
+
+.bfnr-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.bfnr-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.bfnr-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .bfnr-slider {
+    background-color: #E6A500; /* Оранжевый */
+}
+
+input:checked + .bfnr-slider:before {
+    transform: translateX(18px);
+}
+
+.bfnr-button-submit {
+    display: flex;
+    justify-content: end;
+}
+
+.bfs-form-settings-group {
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #E5E5E7;
+}
