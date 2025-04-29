@@ -1618,9 +1618,31 @@ input:checked + .bfnr-slider:before {
     left: 95px;
     z-index: 11;
     /* opacity: 0; */
-    /* display: none; */
+    display: none;
 }
 
 .add-sotrudnik-select {
     margin-bottom: 0px !important;
+}
+
+.add-sotrudnik-buttons {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+
+.asb-cancel-button {
+    background: white;
+    color: black;
+    border: 1px solid #E5E5E7;
+}
+
+.add-sotrudnik-modal.open {
+    display: block;
+}
+
+.add-sotrudnik-modal-yurlico {
+    height: 97%;
 }

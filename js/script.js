@@ -119,6 +119,83 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    const menubuttonadd = document.querySelector('.menu-button-add');
+    const addsotrmodal = document.querySelector('.add-sotrudnik-modal');
+    const buttonCancel = document.querySelector('.asb-cancel-button');
+
+    if (menubuttonadd) {
+        menubuttonadd.addEventListener('click', function (e) {
+            e.stopPropagation(); // Не даем событию "всплыть" до document
+            addsotrmodal.classList.toggle('open');
+        });
+    }
+
+    if (buttonCancel) {
+        buttonCancel.addEventListener('click', () => {
+            addsotrmodal.classList.remove('open');
+        });
+    }
+
+    document.addEventListener('click', function (e) {
+        if (addsotrmodal && menubuttonadd) {
+            const isClickInside = addsotrmodal.contains(e.target) || menubuttonadd.contains(e.target);
+            if (!isClickInside) {
+                addsotrmodal.classList.remove('open');
+            }
+        }
+    });
+
+    const input = document.getElementById("addnomerydo");
+    let mask = null;
+
+    input.addEventListener("focus", function () {
+      if (!mask) {
+        mask = IMask(input, {
+          mask: 'AA-000000',
+          lazy: false, 
+          blocks: {
+            AA: {
+              mask: IMask.MaskedPattern,
+              mask: 'AA',
+              definitions: {
+                A: /[A-Z]/,
+              },
+              prepare: () => 'AA',
+              validate: () => true,
+              overwrite: true
+            }
+          },
+          prepare: function (str) {
+            if (/^\d/.test(str)) {
+              return 'AA-' + str.slice(0, 6);
+            }
+            return str;
+          }
+        });
+
+        if (!input.value.startsWith("AA-")) {
+          input.value = "AA-";
+          mask.updateValue();
+          input.setSelectionRange(3, 3);
+        }
+      }
+    });
+
+    const maskOptions = {
+        mask: '+{7} (000) 000-00-00',
+        lazy: false
+        };
+
+        const phoneInput = document.getElementById("menphone");
+        const phoneInput1 = document.getElementById("addmanphone");
+        const phoneInput2 = document.getElementById("addnumber");
+
+        IMask(phoneInput, maskOptions);
+        IMask(phoneInput1, maskOptions);
+        IMask(phoneInput2, maskOptions);
+        
+
+
     const openBtn = document.querySelector('.open-popup-btn');
     const overlay = document.getElementById('popup-overlay');
     const closeBtn = document.getElementById('close-popup');

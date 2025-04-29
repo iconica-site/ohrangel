@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/imask/dist/imask.min.js"></script>
 </head>
 
 <body>
@@ -241,8 +242,8 @@
                                 <label for="yurface">Юрлицо</label>
                             </div>
                             <div class="tab-sett-col">
-                                <input type="checkbox" name="phone">
-                                <label for="phone">Телефон</label>
+                                <input type="checkbox" name="checkphone">
+                                <label for="checkphone">Телефон</label>
                             </div>
                             <div class="tab-sett-col">
                                 <input type="checkbox" name="razryad">
@@ -448,18 +449,18 @@
 
                 <div class="bfs-input-flex">
                     <div class="bfs-input-group">
-                        <label for="name"></label>
-                        <input placeholder="+7(000) 000-00-00" name="name">
+                        <label for="addnumber"></label>
+                        <input placeholder="+7(000) 000-00-00" name="addnumber" id="addnumber">
                     </div>
                     <div class="bfs-input-group">
-                        <label for="surname"></label>
-                        <input placeholder="Дата рождения" name="surname">
+                        <label for="adddatebirth"></label>
+                        <input placeholder="Дата рождения" name="adddatebirth">
                     </div>
                 </div>
 
                 <div class="bfs-input-flex">
                     <div class="bfs-input-group">
-                        <label for="region"></label>
+                        <label for="addface"></label>
                         <div class="main-select-sform-otchet add-sotrudnik-select">
                             <div class="select-header">
                                 <span class="selected-option">Юр лицо</span>
@@ -467,7 +468,7 @@
                                     <path d="M5 8.33334L9.41074 12.7441C9.73618 13.0695 10.2638 13.0695 10.5893 12.7441L15 8.33334" stroke="#999999" stroke-width="1.67" stroke-linecap="round"/>
                                 </svg>
                             </div>
-                            <input type="hidden" name="region" class="hidden-input">
+                            <input type="hidden" name="addface" class="hidden-input">
                             <div class="select-sform-otchet" style="display: none;">
                                 <span data-select="Юр лицо">Юр лицо</span>
                                 <span data-select="Физ лицо">Физ лицо</span>
@@ -476,7 +477,7 @@
                     </div>
 
                     <div class="bfs-input-group">
-                        <label for="region"></label>
+                        <label for="add-razryad"></label>
                         <div class="main-select-sform-otchet add-sotrudnik-select">
                             <div class="select-header">
                                 <span class="selected-option">Разряд</span>
@@ -484,7 +485,7 @@
                                     <path d="M5 8.33334L9.41074 12.7441C9.73618 13.0695 10.2638 13.0695 10.5893 12.7441L15 8.33334" stroke="#999999" stroke-width="1.67" stroke-linecap="round"/>
                                 </svg>
                             </div>
-                            <input type="hidden" name="region" class="hidden-input">
+                            <input type="hidden" name="add-razryad" class="hidden-input">
                             <div class="select-sform-otchet" style="display: none;">
                                 <span data-select="3-й разряд">3-й разряд</span>
                                 <span data-select="4-й разряд">4-й разряд</span>
@@ -496,25 +497,53 @@
 
                 <div class="bfs-input-flex">
                     <div class="bfs-input-group">
-                        <label for="name"></label>
-                        <input placeholder="Дата прохождения ЕПП" name="name">
+                        <label for="adddateepp"></label>
+                        <input placeholder="Дата прохождения ЕПП" name="adddateepp">
                     </div>
                     <div class="bfs-input-group">
-                        <label for="surname"></label>
-                        <input placeholder="Дата выдачи мед заключения" name="surname">
+                        <label for="adddatemed"></label>
+                        <input placeholder="Дата выдачи мед заключения" name="adddatemed">
                     </div>
                 </div>
 
                 <div class="bfs-input-flex">
                     <div class="bfs-input-group">
-                        <label for="name"></label>
-                        <input placeholder="Дата выдачи удостоверения" name="name">
+                        <label for="adddateydo"></label>
+                        <input placeholder="Дата выдачи удостоверения" name="adddateydo">
                     </div>
                     <div class="bfs-input-group">
-                        <label for="surname"></label>
-                        <input placeholder="Номер удостоверения" name="surname">
+                        <label for="addnomerydo"></label>
+                        <input placeholder="Номер удостоверения" name="addnomerydo" id="addnomerydo">
                     </div>
                 </div>
+
+                <div class="bfs-input-flex">
+                    <div class="bfs-input-group">
+                        <label for="prim"></label>
+                        <textarea name="prim" placeholder="Примечания" cols="5" rows="5"></textarea>
+                    </div>
+                </div>
+
+
+                <div class="notification-table-checkbox">
+                    <input type="checkbox" id="archivniy" name="archivniy">
+                    <label for="archivniy">Архивный</label>
+                </div>
+                <div class="notification-table-checkbox">
+                    <input type="checkbox" id="chs" name="chs">
+                    <label for="chs">Черный список</label>
+                </div>
+                <div class="notification-table-checkbox">
+                    <input type="checkbox" id="sogl-obr" name="sogl-obr">
+                    <label for="sogl-obr">Согласие на обработку персональных данных</label>
+                </div>
+
+                <div class="add-sotrudnik-buttons">
+                    <button type="button" class="asb-cancel-button">Отменить</button>
+                    <button type="submit">Добавить</button>
+                </div>
+
+
             </form>
 
 
@@ -603,8 +632,8 @@
 
                 <div class="bfs-input-flex">
                     <div class="bfs-input-group">
-                        <label for="phone">Телефон</label>
-                        <input placeholder="8(900) 000-00-00" name="phone" id="phone">
+                        <label for="addmanphone">Телефон</label>
+                        <input placeholder="8(900) 000-00-00" name="addmanphone" id="addmanphone">
                     </div>
                     <div class="bfs-input-group">
                         <label for="email">Email</label>
@@ -675,8 +704,8 @@
 
                 <div class="bfs-input-flex">
                     <div class="bfs-input-group">
-                        <label for="phone">Телефон</label>
-                        <input placeholder="8(900) 000-00-00" name="phone" id="phone">
+                        <label for="menphone">Телефон</label>
+                        <input placeholder="8(900) 000-00-00" name="menphone" id="menphone">
                     </div>
                     <div class="bfs-input-group">
                         <label for="email">Email</label>
@@ -735,7 +764,5 @@
 
 
 <script src="js/script.js"></script>
-
-    
-
+  
 </html>

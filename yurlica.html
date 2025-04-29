@@ -236,7 +236,63 @@
 
         </div>
 
+        <div class="add-sotrudnik-modal add-sotrudnik-modal-yurlico">
+            <div class="search-filt-head">
+                <p>Добавить компанию</p>
+            </div>
 
+            <form>
+                <div class="bfs-input-flex">
+                    <div class="bfs-input-group">
+                        <label for="namecompany"></label>
+                        <input placeholder="Наименование компании" name="namecompany">
+                    </div>
+                </div>
+
+                <div class="bfs-input-flex">
+                    <div class="bfs-input-group">
+                        <label for="inn"></label>
+                        <input placeholder="ИНН" name="inn" id="inn">
+                    </div>
+                </div>
+
+                <div class="bfs-input-flex">
+                    <div class="bfs-input-group">
+                        <label for="region-yurlico"></label>
+                        <div class="main-select-sform-otchet add-sotrudnik-select">
+                            <div class="select-header">
+                                <span class="selected-option">Регион</span>
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M5 8.33334L9.41074 12.7441C9.73618 13.0695 10.2638 13.0695 10.5893 12.7441L15 8.33334" stroke="#999999" stroke-width="1.67" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <input type="hidden" name="region-yurlico" class="hidden-input">
+                            <div class="select-sform-otchet" style="display: none;">
+                                <span data-select="Регион 1">Регион 1</span>
+                                <span data-select="Регион 2">Регион 2</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="bfs-input-flex">
+                    <div class="bfs-input-group">
+                        <label for="prim"></label>
+                        <textarea name="prim" placeholder="Примечания" cols="5" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="add-sotrudnik-buttons">
+                    <button type="button" class="asb-cancel-button">Отменить</button>
+                    <button type="submit">Сохранить</button>
+                </div>
+
+
+            </form>
+
+
+        </div>
 
     </main>
 
