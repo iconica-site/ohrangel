@@ -27,10 +27,15 @@
                         <p>Нет активных подписок</p>
                     </div>
                     <div class="account-shevron">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                        <svg class="shevron-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                             <path d="M19.9201 9.45L13.4001 15.97C12.6301 16.74 11.3701 16.74 10.6001 15.97L4.08008 9.45" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg> 
                     </div>
+                </div>
+
+                <div class="account-control-managers">
+                    <a class="open-popup-btn">Управление менеджерами</a>
+                    <a>Выйти</a>
                 </div>
 
                 <div class="account-buttons-group">
@@ -41,6 +46,30 @@
                             <path d="M11.5579 3.16667C11.2996 3.09167 11.0329 3.03333 10.7579 3C9.95794 2.9 9.19128 2.95833 8.47461 3.16667C8.71628 2.55 9.31628 2.11667 10.0163 2.11667C10.7163 2.11667 11.3163 2.55 11.5579 3.16667Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M12.5166 16.3833C12.5166 17.7583 11.3916 18.8833 10.0166 18.8833C9.33327 18.8833 8.69993 18.6 8.24993 18.15C7.79993 17.7 7.5166 17.0667 7.5166 16.3833" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
                         </svg>
+                        <span class="unread-count">5</span>
+                    </div>
+
+                    <div class="account-notification-list">
+                        <div class="anl-item">
+                            <h5>Внесите оплату</h5>
+                            <p>Через 15 дней истекает срок подписки. Внесите оплату.</p>
+                            <span>00:00:00 01.01.2023</span>
+                        </div>
+                        <div class="anl-item">
+                            <h5>Ваш пароль был изменен.</h5>
+                            <p>Ваш пароль был изменен. Если вы не вносили изменения, обратитесь в поддержку</p>
+                            <span>00:00:00 01.01.2023</span>
+                        </div>
+                        <div class="anl-item">
+                            <h5>Списана месячная плата</h5>
+                            <p>Через 15 дней истекает срок подписки. Внесите оплату.</p>
+                            <span>00:00:00 01.01.2023</span>
+                        </div>
+                        <div class="anl-item">
+                            <h5>День рождения!</h5>
+                            <p>%ФИО% - празднует день рождения</p>
+                            <span>00:00:00 01.01.2023</span>
+                        </div>
                     </div>
 
                     <div class="account-tarifi-and-pay">
@@ -301,6 +330,213 @@
         </div>
 
     </main>
+
+    <!-- форма добавления/редактирования менеджеров -->
+<div class="overlay-managers" id="popup-overlay">
+    <div class="popup-managers">
+        <div class="close-popup" id="close-popup">&times;</div>
+
+        <div id="managers-list">
+        
+            <div class="manager-item edit-manager-item">
+                <div class="manager-info">
+                    <div class="manager-email">alex@yandex.ru</div>
+                    <div class="manager-role">Менеджер</div>
+                </div>
+                <div class="delete-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 5.98047C17.67 5.65047 14.32 5.48047 10.98 5.48047C9 5.48047 7.02 5.58047 5.04 5.78047L3 5.98047" stroke="#C8322B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="#C8322B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.8504 9.13965L18.2004 19.2096C18.0904 20.7796 18.0004 21.9996 15.2104 21.9996H8.79039C6.00039 21.9996 5.91039 20.7796 5.80039 19.2096L5.15039 9.13965" stroke="#C8322B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.3301 16.5H13.6601" stroke="#C8322B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.5 12.5H14.5" stroke="#C8322B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="manager-item edit-manager-item">
+                <div class="manager-info">
+                    <div class="manager-email">alex@yandex.ru</div>
+                    <div class="manager-role">Менеджер</div>
+                </div>
+                <div class="delete-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 5.98047C17.67 5.65047 14.32 5.48047 10.98 5.48047C9 5.48047 7.02 5.58047 5.04 5.78047L3 5.98047" stroke="#C8322B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="#C8322B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.8504 9.13965L18.2004 19.2096C18.0904 20.7796 18.0004 21.9996 15.2104 21.9996H8.79039C6.00039 21.9996 5.91039 20.7796 5.80039 19.2096L5.15039 9.13965" stroke="#C8322B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.3301 16.5H13.6601" stroke="#C8322B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.5 12.5H14.5" stroke="#C8322B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="manager-item edit-manager-item">
+                <div class="manager-info">
+                    <div class="manager-email">alex@yandex.ru</div>
+                    <div class="manager-role">Менеджер</div>
+                </div>
+                <div class="delete-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 5.98047C17.67 5.65047 14.32 5.48047 10.98 5.48047C9 5.48047 7.02 5.58047 5.04 5.78047L3 5.98047" stroke="#C8322B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="#C8322B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.8504 9.13965L18.2004 19.2096C18.0904 20.7796 18.0004 21.9996 15.2104 21.9996H8.79039C6.00039 21.9996 5.91039 20.7796 5.80039 19.2096L5.15039 9.13965" stroke="#C8322B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.3301 16.5H13.6601" stroke="#C8322B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.5 12.5H14.5" stroke="#C8322B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+
+            <button class="add-button add-manager-btn">Добавить менеджера</button>
+
+        </div>
+
+
+        <div id="add-manager-form" style="display:none;">
+            <h2>Добавление менеджера</h2>
+
+            <form id="manager-form">
+                <div class="bfs-input-flex">
+                    <div class="bfs-input-group">
+                        <label for="name">Имя</label>
+                        <input placeholder="Петр" name="name">
+                    </div>
+                    <div class="bfs-input-group">
+                        <label for="surname">Фамилия</label>
+                        <input placeholder="Антонов" name="surname">
+                    </div>
+                </div>
+
+                <div class="bfs-input-flex">
+                    <div class="bfs-input-group">
+                        <label for="phone">Телефон</label>
+                        <input placeholder="8(900) 000-00-00" name="phone" id="phone">
+                    </div>
+                    <div class="bfs-input-group">
+                        <label for="email">Email</label>
+                        <input placeholder="companyname@mail.com" name="email">
+                    </div>
+                </div>
+
+                <div class="bfs-input-flex">
+                    <div class="bfs-input-group">
+                        <label for="region">Регион</label>
+                        <div class="main-select-sform-otchet">
+                            <div class="select-header">
+                                <span class="selected-option">Выберите регион</span>
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M5 8.33334L9.41074 12.7441C9.73618 13.0695 10.2638 13.0695 10.5893 12.7441L15 8.33334" stroke="#999999" stroke-width="1.67" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <input type="hidden" name="region" class="hidden-input">
+                            <div class="select-sform-otchet" style="display: none;">
+                                <span data-select="Московская область">Московская область</span>
+                                <span data-select="Красноярский край">Красноярский край</span>
+                                <span data-select="Алтайский край">Алтайский край</span>
+                                <span data-select="Иркутская область">Иркутская область</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bfs-input-group">
+                        <label for="company">Компания</label>
+                        <input placeholder="ООО Безопасность" name="company">
+                    </div>
+                </div>
+
+                <div class="bfs-input-flex">
+                    <div class="bfs-input-group">
+                        <label for="oldpass">Пароль</label>
+                        <input type="password" placeholder="Введите пароль" name="oldpass" id="oldpass">
+                    </div>
+                    <div class="bfs-input-group">
+                        <label for="newpass">Повторите пароль</label>
+                        <input type="password" placeholder="Повторите пароль" name="newpass" id="newpass">
+                    </div>
+                </div>
+                
+
+                <div class="form-buttons">
+                    <button type="button" id="cancel-btn">Отменить</button>
+                    <button type="submit">Добавить</button>
+                </div>
+            </form>
+
+        </div>
+
+        <div id="edit-manager-form" style="display:none;">
+            <h2>Редактирование менеджера</h2>
+
+            <form id="manager-form">
+                <div class="bfs-input-flex">
+                    <div class="bfs-input-group">
+                        <label for="name">Имя</label>
+                        <input placeholder="Петр" name="name">
+                    </div>
+                    <div class="bfs-input-group">
+                        <label for="surname">Фамилия</label>
+                        <input placeholder="Антонов" name="surname">
+                    </div>
+                </div>
+
+                <div class="bfs-input-flex">
+                    <div class="bfs-input-group">
+                        <label for="phone">Телефон</label>
+                        <input placeholder="8(900) 000-00-00" name="phone" id="phone">
+                    </div>
+                    <div class="bfs-input-group">
+                        <label for="email">Email</label>
+                        <input placeholder="companyname@mail.com" name="email">
+                    </div>
+                </div>
+
+                <div class="bfs-input-flex">
+                    <div class="bfs-input-group">
+                        <label for="region">Регион</label>
+                        <div class="main-select-sform-otchet">
+                            <div class="select-header">
+                                <span class="selected-option">Выберите регион</span>
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M5 8.33334L9.41074 12.7441C9.73618 13.0695 10.2638 13.0695 10.5893 12.7441L15 8.33334" stroke="#999999" stroke-width="1.67" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <input type="hidden" name="region" class="hidden-input">
+                            <div class="select-sform-otchet" style="display: none;">
+                                <span data-select="Московская область">Московская область</span>
+                                <span data-select="Красноярский край">Красноярский край</span>
+                                <span data-select="Алтайский край">Алтайский край</span>
+                                <span data-select="Иркутская область">Иркутская область</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bfs-input-group">
+                        <label for="company">Компания</label>
+                        <input placeholder="ООО Безопасность" name="company">
+                    </div>
+                </div>
+
+                <div class="bfs-input-flex">
+                    <div class="bfs-input-group">
+                        <label for="oldpass">Старый пароль</label>
+                        <input type="password" placeholder="Введите старый пароль" name="oldpass" id="oldpass">
+                    </div>
+                    <div class="bfs-input-group">
+                        <label for="newpass">Новый пароль</label>
+                        <input type="password" placeholder="Введите новый пароль" name="newpass" id="newpass">
+                    </div>
+                </div>
+                
+
+                <div class="form-buttons">
+                    <button type="button" id="edit-cancel-btn">Отменить</button>
+                    <button type="submit">Сохранить</button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>
 
 </body>
 

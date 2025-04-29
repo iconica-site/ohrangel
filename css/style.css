@@ -43,6 +43,22 @@ header {
     border-radius: 6px;
     background-color: #2B2D2F;
     cursor: pointer;
+    position: relative;
+}
+
+.unread-count {
+    position: absolute;
+    background: #E6A500;
+    color: #fff ;
+    font-size: 9px;
+    border-radius: 50%;
+    padding: 2px 5px;
+    top: 34px;
+    right: -6px;
+}
+
+.account-notification.active {
+    background-color: #7d8388;
 }
 
 .account-tarifi-and-pay {
@@ -93,6 +109,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.navbar-buttons a {
+    text-decoration: none;
 }
 
 .menu-button-add span {
@@ -280,6 +300,7 @@ th {
 }
 .main-table-of-sotr {
     /* padding: 0px 22px; */
+    padding-top: 30px;
 }
 .table-first-th {
     color: black;
@@ -434,6 +455,64 @@ td {
 /* Сам div становится оранжевым */
 .tab-sett-col.active {
     background-color: #F5ECD5;
+}
+
+
+
+
+
+
+.notification-table-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Скрываем стандартный чекбокс */
+.notification-table-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+/* Стиль кастомного чекбокса через label::before */
+.notification-table-checkbox label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.notification-table-checkbox label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #E5E5E7;
+    background-color: white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: background 0.3s, border 0.3s;
+}
+
+/* Галочка при активном чекбоксе */
+.notification-table-checkbox input[type="checkbox"]:checked + label::before {
+    background-color: #E6A500;
+    border-color: #E6A500;
+}
+
+.notification-table-checkbox input[type="checkbox"]:checked + label::after {
+    content: "✔";
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 16px;
 }
 
 
@@ -1254,7 +1333,11 @@ input:checked + .bfnr-slider:before {
     font-size: 16.83px;
     line-height: 100%;
     letter-spacing: 0%;
+}
 
+.notification-table {
+    padding: 0px;
+    border: none;
 }
 
 .boft-price span {
@@ -1314,5 +1397,230 @@ input:checked + .bfnr-slider:before {
     letter-spacing: -0.1%;
     vertical-align: middle;
     color: #979AA0;
+}
 
+.account-control-managers {
+    padding: 10px;
+    background: #F8F9FB;
+    border: 1px solid #E5E5E7;
+    color: black;
+    border-radius: 12px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+    z-index: 11;
+    max-width: 260px;
+    width: 100%; 
+}
+
+.account-control-managers a {
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.shevron-icon {
+    transition: transform 0.3s;
+}
+
+.account-name.active .shevron-icon {
+    transform: rotate(180deg);
+}
+
+.account-control-managers.active {
+    display: flex;
+}
+
+.overlay-managers {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-managers {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 30px;
+    /* max-width: 415px; */
+    width: 45%;
+    border: 1px solid #E5E5E7;
+    position: relative;
+}
+
+.manager-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 5px 0px;
+    cursor: pointer;
+}
+
+.manager-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.manager-email {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -1%;
+
+}
+
+.manager-role {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.1px;
+    color: #858C95;
+
+}
+
+.delete-icon {
+    cursor: pointer;
+}
+
+.delete-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.add-button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #f2a100;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    transition: background-color 0.3s;
+    font-family: "Roboto", sans-serif;
+}
+
+.add-button:hover {
+    background-color: #d28d00;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 18px;
+    color: #999;
+    cursor: pointer;
+}
+.close-popup:hover {
+    color: #333;
+}
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-buttons button {
+    width: 48%;
+}
+
+#cancel-btn {
+    background: transparent;
+    color: black;
+    border: 1px solid #E5E5E7;
+}
+
+#edit-cancel-btn {
+    background: transparent;
+    color: black;
+    border: 1px solid #E5E5E7;
+}
+
+.account-notification-list {
+    border: 1px solid #D1D9E2;
+    background: #F8F9FB;
+    border-radius: 12px;
+    position: absolute;
+    z-index: 10;
+    right: 9%;
+    top: 10%;
+    display: none;
+}
+
+.account-notification-list.active {
+    display: block;
+}
+
+.anl-item {
+    border-bottom: 1px solid #D1D9E2;
+    padding: 15px 25px;
+    color: black;
+}
+
+.anl-item:last-child {
+    border-bottom: none;
+}
+
+.anl-item h5 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15%;
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+    color: #2E3646;
+}
+
+.anl-item p {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.1%;
+    color: #5F6D7E;
+    max-width: 330px;
+}
+
+.anl-item span {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.1%;
+    color: #5F6D7E;
+}
+
+.add-sotrudnik-modal {
+    border-right: 1px solid #EEEEEE;
+    background-color: #F9F9F9;
+    padding: 15px 20px;
+    position: absolute;
+    left: 95px;
+    z-index: 11;
+    /* opacity: 0; */
+    /* display: none; */
+}
+
+.add-sotrudnik-select {
+    margin-bottom: 0px !important;
 }

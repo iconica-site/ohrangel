@@ -118,6 +118,72 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
+
+    const openBtn = document.querySelector('.open-popup-btn');
+    const overlay = document.getElementById('popup-overlay');
+    const closeBtn = document.getElementById('close-popup');
+    const addManagerBtns = document.querySelectorAll('.add-manager-btn');
+    const editManagerBtns = document.querySelectorAll('.edit-manager-item');
+    const managersList = document.getElementById('managers-list');
+    const addForm = document.getElementById('add-manager-form');
+    const editForm = document.getElementById('edit-manager-form');
+    const cancelBtn = document.getElementById('cancel-btn');
+    const editCancelBtn = document.getElementById('edit-cancel-btn');
+    const form = document.getElementById('manager-form');
+  
+    if (openBtn) {
+        openBtn.addEventListener('click', () => {
+        overlay.style.display = 'flex';
+        });
+    }
+  
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+        overlay.style.display = 'none';
+        });
+    }
+  
+    if (overlay) {
+        overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            overlay.style.display = 'none';
+        }
+        });
+    }
+
+    // форма добавления
+    if (addManagerBtns) {
+        addManagerBtns.forEach(function(button) {
+            button.addEventListener('click', function() {
+                managersList.style.display = 'none';
+                addForm.style.display = 'block';
+            });
+        });
+    }
+
+    if (cancelBtn) {
+        cancelBtn.addEventListener('click', () => {
+            addForm.style.display = 'none';
+            managersList.style.display = 'block';
+        });
+    }
+
+    // форма редактирования
+    if (editManagerBtns) {
+        editManagerBtns.forEach(function(button) {
+            button.addEventListener('click', function() {
+                managersList.style.display = 'none';
+                editForm.style.display = 'block';
+            });
+        });
+    }
+
+    if (editCancelBtn) {
+        editCancelBtn.addEventListener('click', () => {
+            editForm.style.display = 'none';
+            managersList.style.display = 'block';
+        });
+    }
     
 
 });
@@ -142,6 +208,48 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    const accountName = document.querySelector('.account-name');
+    const managersBlock = document.querySelector('.account-control-managers');
+
+    if (accountName && managersBlock) {
+        accountName.addEventListener('click', function(event) {
+            event.stopPropagation(); // Останавливаем всплытие события
+            accountName.classList.toggle('active');
+            managersBlock.classList.toggle('active');
+        });
+
+        // Закрытие при клике вне блока
+        document.addEventListener('click', function(event) {
+            const isClickInside = accountName.contains(event.target) || managersBlock.contains(event.target);
+
+            if (!isClickInside) {
+                accountName.classList.remove('active');
+                managersBlock.classList.remove('active');
+            }
+        });
+    }
+
+    const accountNotification = document.querySelector('.account-notification');
+    const accountNotificationList = document.querySelector('.account-notification-list');
+
+    if (accountNotification && accountNotificationList) {
+        accountNotification.addEventListener('click', function(event) {
+            event.stopPropagation(); // Останавливаем всплытие события
+            accountNotification.classList.toggle('active');
+            accountNotificationList.classList.toggle('active');
+        });
+
+        // Закрытие при клике вне блока
+        document.addEventListener('click', function(event) {
+            const isClickInside = accountNotification.contains(event.target) || accountNotificationList.contains(event.target);
+
+            if (!isClickInside) {
+                accountNotification.classList.remove('active');
+                accountNotificationList.classList.remove('active');
+            }
+        });
+    }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -230,4 +338,5 @@ document.querySelectorAll('.select-sform-otchet span').forEach(item => {
         selectBox.querySelectorAll('.error-message').forEach(e => e.remove());
     });
 });
+
 
