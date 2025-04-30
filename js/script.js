@@ -38,6 +38,73 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         });
+
+        const openBtn = document.querySelector('.open-popup-btn');
+        const overlay = document.getElementById('popup-overlay');
+        const closeBtn = document.getElementById('close-popup');
+        const addManagerBtns = document.querySelectorAll('.add-manager-btn');
+        const editManagerBtns = document.querySelectorAll('.edit-manager-item');
+        const managersList = document.getElementById('managers-list');
+        const addForm = document.getElementById('add-manager-form');
+        const editForm = document.getElementById('edit-manager-form');
+        const cancelBtn = document.getElementById('cancel-btn');
+        const editCancelBtn = document.getElementById('edit-cancel-btn');
+        const form = document.getElementById('manager-form');
+    
+        if (openBtn) {
+            openBtn.addEventListener('click', () => {
+            overlay.style.display = 'flex';
+            });
+        }
+    
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+            overlay.style.display = 'none';
+            });
+        }
+    
+        if (overlay) {
+            overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                overlay.style.display = 'none';
+            }
+            });
+        }
+
+        // форма добавления
+        if (addManagerBtns) {
+            addManagerBtns.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    managersList.style.display = 'none';
+                    addForm.style.display = 'block';
+                });
+            });
+        }
+
+        if (cancelBtn) {
+            cancelBtn.addEventListener('click', () => {
+                addForm.style.display = 'none';
+                managersList.style.display = 'block';
+            });
+        }
+
+        // форма редактирования
+        if (editManagerBtns) {
+            editManagerBtns.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    managersList.style.display = 'none';
+                    editForm.style.display = 'block';
+                });
+            });
+        }
+
+        if (editCancelBtn) {
+            editCancelBtn.addEventListener('click', () => {
+                editForm.style.display = 'none';
+                managersList.style.display = 'block';
+            });
+        }
+
     });
     
 
@@ -193,74 +260,6 @@ document.addEventListener('DOMContentLoaded', function () {
         IMask(phoneInput, maskOptions);
         IMask(phoneInput1, maskOptions);
         IMask(phoneInput2, maskOptions);
-        
-
-
-    const openBtn = document.querySelector('.open-popup-btn');
-    const overlay = document.getElementById('popup-overlay');
-    const closeBtn = document.getElementById('close-popup');
-    const addManagerBtns = document.querySelectorAll('.add-manager-btn');
-    const editManagerBtns = document.querySelectorAll('.edit-manager-item');
-    const managersList = document.getElementById('managers-list');
-    const addForm = document.getElementById('add-manager-form');
-    const editForm = document.getElementById('edit-manager-form');
-    const cancelBtn = document.getElementById('cancel-btn');
-    const editCancelBtn = document.getElementById('edit-cancel-btn');
-    const form = document.getElementById('manager-form');
-  
-    if (openBtn) {
-        openBtn.addEventListener('click', () => {
-        overlay.style.display = 'flex';
-        });
-    }
-  
-    if (closeBtn) {
-        closeBtn.addEventListener('click', () => {
-        overlay.style.display = 'none';
-        });
-    }
-  
-    if (overlay) {
-        overlay.addEventListener('click', (e) => {
-        if (e.target === overlay) {
-            overlay.style.display = 'none';
-        }
-        });
-    }
-
-    // форма добавления
-    if (addManagerBtns) {
-        addManagerBtns.forEach(function(button) {
-            button.addEventListener('click', function() {
-                managersList.style.display = 'none';
-                addForm.style.display = 'block';
-            });
-        });
-    }
-
-    if (cancelBtn) {
-        cancelBtn.addEventListener('click', () => {
-            addForm.style.display = 'none';
-            managersList.style.display = 'block';
-        });
-    }
-
-    // форма редактирования
-    if (editManagerBtns) {
-        editManagerBtns.forEach(function(button) {
-            button.addEventListener('click', function() {
-                managersList.style.display = 'none';
-                editForm.style.display = 'block';
-            });
-        });
-    }
-
-    if (editCancelBtn) {
-        editCancelBtn.addEventListener('click', () => {
-            editForm.style.display = 'none';
-            managersList.style.display = 'block';
-        });
-    }
     
 
 });
