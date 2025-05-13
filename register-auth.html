@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OHRANGEL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        overflow-x: hidden;
+    }
+</style>
+
+<body>
+
+    <div>
+        <button class="bnfa-button" id="register-button">Регистрация</button>
+        <button class="bnfa-button" id="auth-button">Авторизация</button>
+    </div>
+
+    <div class="index-reg-overlay"></div>
+    <div class="index-register-modal">
+        <div class="irm-head">
+            <h2>Регистрация</h2>
+        </div>
+
+        <form>
+            <div class="irm-input-flex">
+                <div class="bfs-input-group">
+                    <label for="name">Ваше имя</label>
+                    <input name="name">
+                </div>
+                
+                <div class="bfs-input-group">
+                    <label for="name">Ваш e-mail</label>
+                    <input name="name">
+                </div>
+
+                <div class="bfs-input-group">
+                    <label for="name">Ваш телефон</label>
+                    <input name="name">
+                </div>
+            </div>
+
+            <div class="notification-table-checkbox politic-sogl">
+                <input type="checkbox" id="sogl" name="sogl">
+                <label for="sogl">Я принимаю условия  пользовательского соглашения и политики конфкеденциальности</label>
+            </div>
+
+            <div class="irm-button-reg">
+                <button>Зарегистрироваться</button>
+            </div>
+        </form>
+
+        <div class="irm-registration-or-signin">
+            <span>Уже заргестрировались ?</span>
+            <a id="auth-in-modal">Войти в аккаунт</a>
+        </div>
+
+        <div class="irm-info">
+            <span>Этот сайт защищен reCAPTCHA, поэтому применяются <a href="3">Политика конфиденциальности</a> и <a href="3">Условия использования Google</a></span>
+        </div>
+    </div>
+
+    <div class="index-auth-overlay"></div>
+    <div class="index-auth-modal">
+        <div class="irm-head">
+            <h2>Вход в учетную запись</h2>
+        </div>
+
+        <form>
+            <div class="irm-input-flex">
+                
+                <div class="bfs-input-group">
+                    <label for="name">Ваш e-mail</label>
+                    <input name="name">
+                </div>
+
+                <div class="bfs-input-group">
+                    <label for="name">Пароль</label>
+                    <input type="password" name="name">
+                </div>
+            </div>
+
+            <div class="iam-zm-group">
+                <div class="notification-table-checkbox politic-sogl">
+                    <input type="checkbox" id="sogl" name="sogl">
+                    <label for="sogl">Запомнить меня</label>
+                </div>
+                <a id="iam-respas">Забыли пароль?</a>
+            </div>
+
+            <div class="irm-button-reg">
+                <button>Войти</button>
+            </div>
+        </form>
+
+        <div class="irm-registration-or-signin">
+            <span>Еще не пользовались ?</span>
+            <a id="register-in-modal">Зарегестрироваться</a>
+        </div>
+
+        <div class="irm-info">
+            <span>Этот сайт защищен reCAPTCHA, поэтому применяются <a href="3">Политика конфиденциальности</a> и <a href="3">Условия использования Google</a></span>
+        </div>
+    </div>
+
+    <div class="index-respas-overlay"></div>
+    <div class="index-respas-modal">
+        <div class="irm-head">
+            <h2>Восстановление пароля</h2>
+        </div>
+
+        <form>
+            <div class="irm-input-flex">
+                
+                <div class="bfs-input-group">
+                    <label for="name">Ваш e-mail</label>
+                    <input name="name">
+                </div>
+
+                <div class="bfs-input-group">
+                    <label for="name">Пароль</label>
+                    <input type="password" name="name">
+                </div>
+
+                <div class="bfs-input-group">
+                    <label for="name">Новый пароль</label>
+                    <input type="password" name="name">
+                </div>
+            </div>
+
+            <div class="irm-button-reg">
+                <button>Восстановить</button>
+            </div>
+        </form>
+
+        <div class="irm-info irm-info-respas">
+            <span>Этот сайт защищен reCAPTCHA, поэтому применяются <a href="3">Политика конфиденциальности</a> и <a href="3">Условия использования Google</a></span>
+        </div>
+    </div>
+
+</body>
+
+<script src="js/script.js"></script>
+<script>
+    const registerBtn = document.getElementById('register-button');
+    const registerAModal = document.getElementById('register-in-modal');
+    const authAModal = document.getElementById('auth-in-modal');
+    const overlay = document.querySelector('.index-reg-overlay');
+    const modal = document.querySelector('.index-register-modal');
+    const authBtn = document.getElementById('auth-button');
+    const overlayAuth = document.querySelector('.index-auth-overlay');
+    const modalAuth = document.querySelector('.index-auth-modal');
+    const overlayResPas = document.querySelector('.index-respas-overlay');
+    const modalResPas = document.querySelector('.index-respas-modal');
+    const buttonResPas = document.getElementById('iam-respas');
+
+    function openModal(modal, overlay) {
+        modal.classList.add('modal-active');
+        overlay.classList.add('overlay-active');
+    }
+
+    function closeModal(modal, overlay) {
+        modal.classList.remove('modal-active');
+        overlay.classList.remove('overlay-active');
+    }
+
+    registerBtn.addEventListener('click', () => {
+        openModal(modal, overlay);
+    });
+
+    overlay.addEventListener('click', () => {
+        closeModal(modal, overlay);
+    });
+
+    authBtn.addEventListener('click', () => {
+        openModal(modalAuth, overlayAuth);
+    });
+
+    overlayAuth.addEventListener('click', () => {
+        closeModal(modalAuth, overlayAuth);
+    });
+
+    overlayResPas.addEventListener('click', () => {
+        closeModal(modalResPas, overlayResPas);
+    });
+
+    buttonResPas.addEventListener('click', () => {
+        closeModal(modalAuth, overlayAuth);
+        openModal(modalResPas, overlayResPas);
+    });
+
+    authAModal.addEventListener('click', () => {
+        closeModal(modal, overlay);
+        openModal(modalAuth, overlayAuth);
+    });
+
+    registerAModal.addEventListener('click', () => {
+        closeModal(modalAuth, overlayAuth);
+        openModal(modal, overlay);
+    });
+
+</script>
+
+</html>
