@@ -415,4 +415,67 @@ document.querySelectorAll('.select-sform-otchet span').forEach(item => {
     });
 });
 
+const registerBtn = document.getElementById('register-button');
+const registerAModal = document.getElementById('register-in-modal');
+const authAModal = document.getElementById('auth-in-modal');
+const overlay = document.querySelector('.index-reg-overlay');
+const modalRA = document.querySelector('.index-register-modal');
+const authBtn = document.getElementById('auth-button');
+const overlayAuth = document.querySelector('.index-auth-overlay');
+const modalAuth = document.querySelector('.index-auth-modal');
+const overlayResPas = document.querySelector('.index-respas-overlay');
+const modalResPas = document.querySelector('.index-respas-modal');
+const buttonResPas = document.getElementById('iam-respas');
+
+function openModal(modal, overlay) {
+    modal.classList.add('modal-active');
+    overlay.classList.add('overlay-active');
+    document.body.classList.add('overflow-off');
+}
+
+function closeModal(modal, overlay) {
+    modal.classList.remove('modal-active');
+    overlay.classList.remove('overlay-active');
+
+    const anyModalActive = document.querySelector('.modal-active');
+    if (!anyModalActive) {
+        document.body.classList.remove('overflow-off');
+    }
+}
+
+registerBtn.addEventListener('click', () => {
+    openModal(modalRA, overlay);
+});
+
+overlay.addEventListener('click', () => {
+    closeModal(modalRA, overlay);
+});
+
+authBtn.addEventListener('click', () => {
+    openModal(modalAuth, overlayAuth);
+});
+
+overlayAuth.addEventListener('click', () => {
+    closeModal(modalAuth, overlayAuth);
+});
+
+overlayResPas.addEventListener('click', () => {
+    closeModal(modalResPas, overlayResPas);
+});
+
+buttonResPas.addEventListener('click', () => {
+    closeModal(modalAuth, overlayAuth);
+    openModal(modalResPas, overlayResPas);
+});
+
+authAModal.addEventListener('click', () => {
+    closeModal(modalRA, overlay);
+    openModal(modalAuth, overlayAuth);
+});
+
+registerAModal.addEventListener('click', () => {
+    closeModal(modalAuth, overlayAuth);
+    openModal(modalRA, overlay);
+});
+
 
