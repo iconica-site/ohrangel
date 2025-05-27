@@ -1,0 +1,274 @@
+@media (max-width: 990px) { 
+    .main-left-navbar {
+        background-color: #252525;
+        color: #858C95;
+        padding: 35px 0px;
+        min-width: 95px;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 20px;
+        padding: 10px;
+        box-shadow: 8px -5px 30px rgba(169, 169, 169, 0.5);
+        width: -webkit-fill-available;
+        z-index: 100;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        min-height: auto;
+    }
+
+    .navbar-buttons {
+        padding: 8px;
+    }
+
+    th, td {
+        white-space: nowrap;
+    }
+
+    .account-tarifi-and-pay {
+        display: none;
+    }
+
+    .account-notification-list {
+        display: none;
+    }
+
+    .account-name {
+        display: none;
+    }
+
+    .account-logo-left img {
+        width: 40px;
+    }
+
+    .account-buttons-group {
+        margin-left: 0px;
+    }
+
+    .main-content-place {
+        padding: 0px 12px;
+        padding-bottom: 120px;
+    }
+
+    .menu-table-search {
+        width: auto;
+    }
+    
+    .menu-table-sotr-group {
+        flex-direction: column;
+    }
+
+    .menu-table-sotrudniki {
+        justify-content: space-between;
+    }
+
+    header {
+        padding: 10px 15px;  
+    }
+
+    .account-mobile-burger {
+        display: flex;
+        align-items: center;
+        border: 1px solid #323539;
+        padding: 15px 12px;
+        border-radius: 6px;
+        background-color: #2B2D2F;
+        cursor: pointer;
+        position: relative;
+        flex-direction: column;
+    }
+
+    .main-table-of-sotr {
+        overflow: auto;
+    }
+
+    .amb-border {
+        background: white;
+        height: 2px;
+        width: 20px;
+        margin-bottom: 5px;
+    }
+
+    .account-mobile-burger div:last-child {
+        margin-bottom: 0px;
+    }
+
+    .bfs-input-flex {
+        flex-direction: column;
+    }
+
+    .add-sotrudnik-modal {
+        width: -webkit-fill-available;
+        left: 0px;
+        padding-bottom: 100px;
+    }
+
+    .search-filt-checkbox-group {
+        padding-bottom: 100px;
+    }
+
+    .asb-cancel-button {
+        display: none;
+    }
+
+    .search-filters-modal {
+        max-width: none !important;
+        width: -webkit-fill-available !important;
+        left: 0px;
+    }
+
+    .table-setting-select {
+        left: 30%;
+    }
+
+    .asbcb-for-mobile {
+        display: block !important;
+        font-size: 30px;
+        padding: 0px 7px !important;
+    }
+
+    .select-sform-otchet {
+        width: -webkit-fill-available;
+    }
+
+    .sfh-group-button {
+        display: flex;
+        gap: 10px;
+    }
+
+    .mobile-burger-modal {
+        background-color: #252525;
+        width: -webkit-fill-available;
+        height: 100px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 15px;
+    }
+
+    .mobile-burger-modal.active {
+        display: flex;
+    }
+
+    .mbm-acc-name {
+        display: flex !important;
+        color: white;
+    }
+
+    .account-name-mob {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        cursor: pointer;
+    }
+
+    .account-control-managers-mob {
+        padding: 10px;
+        background: #F8F9FB;
+        border: 1px solid #E5E5E7;
+        color: black;
+        border-radius: 12px;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 20%;
+        z-index: 11;
+        width: -webkit-fill-available;
+        margin-left: 10px;
+        margin-right: 10px; 
+    }
+
+    .account-control-managers-mob a {
+        padding: 10px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .account-name-mob.active .shevron-icon {
+        transform: rotate(180deg);
+    }
+    .account-control-managers-mob.active {
+        display: flex;
+    }
+
+    .popup-managers {
+        width: -webkit-fill-available;
+    }
+    
+    .main-statistiks {
+        flex-direction: column;
+    }
+
+    .block-of-kolvo {
+        width: auto;
+    }
+
+    .bnfa-text span {
+        max-width: 300px;
+        width: 100%;
+        display: flex;
+    }
+
+    .block-group-grafics {
+        flex-direction: column;
+    }
+
+    .bgg-left-grafics {
+        width: 100%;
+    }
+
+    .bgg-right-grafics {
+        width: 100%;
+    }
+
+    .bgg-rg-top {
+        flex-direction: column;
+    }
+
+    .bggrt-block-with-stats {
+        width: auto;
+    }
+
+    .bgg-rg-bottom {
+        flex-direction: column;
+        padding-bottom: 100px;
+    }
+
+    .notification-table {
+        overflow: auto;
+    }
+
+    .blocks-with-base-znaniy {
+        overflow: auto;
+    }
+
+    .main-settings-place {
+        flex-direction: column;
+    }
+
+    .bfs-input-group .main-select-sform-otchet {
+        margin-bottom: 0px;
+    }
+
+    .block-form-settings-left {
+        width: 100%;
+    }
+
+    .block-form-notification-right {
+        width: auto;
+    }
+    .bfnr-noticication-form {
+        gap: 10px;
+    }
+
+    .block-znaniy {
+        flex: 0 0 39%;
+    }
+
+    .all-tariffs-group {
+        flex-direction: column;
+    }
+        
+}

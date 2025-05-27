@@ -1,0 +1,133 @@
+@media (max-width: 990px) { 
+
+    .mpdp-buttons {
+        justify-content: center;
+    }
+    
+    .mpdp-text {
+        padding-left: 50px;
+                padding-right: 50px;
+    }
+    .mphglan-nav a {
+        display: none;
+    }
+
+    .mpp-blocks-group {
+        flex-wrap: nowrap;
+        flex-direction: column;
+                padding-left: 50px;
+        padding-right: 50px;
+    }
+    .mp-possibilities {
+        max-width: 900px;
+    }
+
+    .mpdp-text span {
+        font-size: 50px;
+        line-height: 58px;
+    }
+
+    .mpfgli-messangers {
+        justify-content: center;
+        padding-bottom: 50px;
+    }
+
+    .mptlarg-right {
+        display: none;
+    }
+
+    .morgrv-block {
+        height: 315px !important;
+        flex: 0 0 88%;
+    }
+
+    .mpfgrn-nav {
+            max-width: 200px;
+            width: 100%;
+            flex: 0 0 50%;
+    }
+
+    .mpfg-right-nav {
+        width: 100%;
+        /* flex-direction: column; */
+        align-items: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+
+    .mpfgli-logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .mpfgli-text {
+            text-align: center;
+    }
+
+    .mpfg-left-info {
+        width: 100%;
+    }
+
+    .mp-footer-group {
+        flex-direction: column;
+    }
+
+    .mtffg-tags {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0px;
+    }
+
+    .mtffg-form {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .mpag-right {
+        width: 100%;
+    }
+
+    .mpag-left {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .mpag-left-and-right-group {
+        flex-direction: column;
+        padding-left: 40px;
+        padding-right: 87px;
+    }
+
+    .mpt-left-and-right-group {
+        flex-direction: column;
+    }
+
+    .all-tariffs-group {
+        flex-direction: column;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .mppa-main-panel-lk {
+        overflow: auto;
+        max-width: 450px;
+    }
+
+    .main-table-of-sotr {
+        overflow: auto;
+    }
+    .menu-table-sotr-group {
+        flex-direction: column;
+    }
+
+    .menu-table-sotrudniki {
+        justify-content: space-between;
+    }
+
+    .menu-table-search {
+        width: auto;
+    }
+}

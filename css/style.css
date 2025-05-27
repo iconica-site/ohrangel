@@ -372,7 +372,8 @@ td {
     border: 1px solid #E5E5E7;
     position: absolute;
     max-width: 220px;
-    left: 80%;
+    left: 75%;
+    top: 14%;
     z-index: 10;
     opacity: 0;
     transform: translateY(-10px);
@@ -1949,6 +1950,8 @@ input:checked + .bfnr-slider:before {
     background: #181818;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .mp-digital-platform {
@@ -1964,6 +1967,15 @@ input:checked + .bfnr-slider:before {
     line-height: 67px;
     letter-spacing: -2%;
     color: white;
+    max-width: 1035px;
+    display: flex
+}
+
+.mpm-group-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .mpdp-text p {
@@ -2790,4 +2802,16 @@ input:checked + .bfnr-slider:before {
     color: #979AA0;
     margin-block-start: 2em;
     margin-block-end: 3em;
+}
+
+.asbcb-for-mobile {
+    display: none;
+}
+
+.mobile-burger-modal {
+    display: none;
+}
+
+.account-control-managers-mob {
+    display: none;
 }

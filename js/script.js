@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
 
-        const openBtn = document.querySelector('.open-popup-btn');
+        const openBtn = document.querySelectorAll('.open-popup-btn');
         const overlay = document.getElementById('popup-overlay');
         const closeBtn = document.getElementById('close-popup');
         const addManagerBtns = document.querySelectorAll('.add-manager-btn');
@@ -51,9 +51,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const editCancelBtn = document.getElementById('edit-cancel-btn');
         const form = document.getElementById('manager-form');
     
-        if (openBtn) {
-            openBtn.addEventListener('click', () => {
-            overlay.style.display = 'flex';
+        if (openBtn.length > 0) {
+            openBtn.forEach(button => {
+                button.addEventListener('click', () => {
+                    overlay.style.display = 'flex';
+                });
             });
         }
     
@@ -156,6 +158,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const resetBtn = document.querySelector('.search-filters-modal .reset-filters');
     const modal = document.querySelector('.search-filters-modal');
+    const buttonCancelSfh = document.querySelector('.sfh-cancel-button');
+
+    if (buttonCancelSfh) {
+        buttonCancelSfh.addEventListener('click', () => {
+            modal.classList.remove('open');
+        });
+    }
 
     if (resetBtn) {
         resetBtn.addEventListener('click', function () {
@@ -188,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const menubuttonadd = document.querySelector('.menu-button-add');
     const addsotrmodal = document.querySelector('.add-sotrudnik-modal');
-    const buttonCancel = document.querySelector('.asb-cancel-button');
+    const buttonCancel = document.querySelectorAll('.asb-cancel-button');
 
     if (menubuttonadd) {
         menubuttonadd.addEventListener('click', function (e) {
@@ -197,11 +206,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    if (buttonCancel) {
-        buttonCancel.addEventListener('click', () => {
+    buttonCancel.forEach(button => {
+        button.addEventListener('click', () => {
             addsotrmodal.classList.remove('open');
         });
-    }
+    });
 
     document.addEventListener('click', function (e) {
         if (addsotrmodal && menubuttonadd) {
@@ -285,23 +294,54 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    const mobileBurgerButt = document.querySelector('.account-mobile-burger');
+    const mobileBurger = document.querySelector('.mobile-burger-modal');
+
+    if (mobileBurger && mobileBurgerButt) {
+        // Клик по кнопке: переключение класса у модалки
+        mobileBurgerButt.addEventListener('click', function(event) {
+            event.stopPropagation(); // Останавливаем всплытие, чтобы не сработало закрытие
+            mobileBurger.classList.toggle('active');
+        });
+    }
+
+
     const accountName = document.querySelector('.account-name');
     const managersBlock = document.querySelector('.account-control-managers');
 
     if (accountName && managersBlock) {
         accountName.addEventListener('click', function(event) {
-            event.stopPropagation(); // Останавливаем всплытие события
+            event.stopPropagation(); 
             accountName.classList.toggle('active');
             managersBlock.classList.toggle('active');
         });
 
-        // Закрытие при клике вне блока
         document.addEventListener('click', function(event) {
             const isClickInside = accountName.contains(event.target) || managersBlock.contains(event.target);
 
             if (!isClickInside) {
                 accountName.classList.remove('active');
                 managersBlock.classList.remove('active');
+            }
+        });
+    }
+
+    const accountNameMob = document.querySelector('.account-name-mob');
+    const managersBlockMob = document.querySelector('.account-control-managers-mob');
+
+    if (accountNameMob && managersBlockMob) {
+        accountNameMob.addEventListener('click', function(event) {
+            event.stopPropagation(); 
+            accountNameMob.classList.toggle('active');
+            managersBlockMob.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function(event) {
+            const isClickInside = accountNameMob.contains(event.target) || managersBlockMob.contains(event.target);
+
+            if (!isClickInside) {
+                accountNameMob.classList.remove('active');
+                managersBlockMob.classList.remove('active');
             }
         });
     }
