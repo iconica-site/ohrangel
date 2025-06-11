@@ -48,7 +48,7 @@
     }
 
     .mpfg-right-nav {
-        width: 100%;
+        width: 65%;
         /* flex-direction: column; */
         align-items: center;
         gap: 40px;
@@ -111,9 +111,31 @@
         padding-right: 50px;
     }
 
+    /* Страница О Компании */
+
     .mppa-main-panel-lk {
         overflow: auto;
-        max-width: 450px;
+        max-width: 320px;
+    }
+
+    .mptc-about {
+        padding: 80px 50px;
+    }
+
+    .mpdp-buttons a {
+        white-space: nowrap;
+    }
+    
+    .mpawpg-content {
+        flex-direction: column;
+    }
+
+    .mp-about-what-predl {
+        padding: 50px;
+    }
+
+    .mptcg-about-content {
+        flex-direction: column;
     }
 
     .main-table-of-sotr {
@@ -129,5 +151,25 @@
 
     .menu-table-search {
         width: auto;
+    }
+
+    .mpdp-about-group {
+        flex-direction: column;
+        padding-top: 0px;
+    }
+
+    .mpdp-about-company {
+        padding-bottom: 50px;
+    }
+
+    /* Страница Статья */
+
+    .mp-tariff-constructor-article {
+        padding: 50px;
+    }
+
+    .mpdp-article span {
+        font-size: 35px;
+        line-height: 44px;
     }
 }
